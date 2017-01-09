@@ -30,12 +30,6 @@
         <scope>provided</scope>
     </dependency>
     <dependency>
-    	<groupId>com.comphenix.protocol</groupId>
-    	<artifactId>ProtocolLib-API</artifactId>
-    	<version>4.0</version>
-    	<scope>provided</scope>
-    </dependency>
-    <dependency>
          <groupId>me.clip</groupId>
           <artifactId>placeholderapi</artifactId>
           <version>2.5.1</version>
@@ -82,7 +76,6 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <outputFile>${plugin-folder}/HoloGUIApi.jar</outputFile>
               <shadedArtifactAttached>false</shadedArtifactAttached>
               <relocations>
                 <relocation>

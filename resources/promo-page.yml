@@ -1,0 +1,162 @@
+promo-page:
+
+  components:
+
+    banner-scroll:
+      type: "label"
+      label-distance: 6
+      text:
+        - "%scroll%   &a&lTHANKS FOR PLAYING   "
+      position:
+        x: 0
+        y: 1.3
+
+    paypal-text:
+      type: "label"
+      label-distance: 8
+      text:
+        - "&lLove my plugins? Please consider donating!"
+        - ""
+        - "&lYour donations help me to keep making great interactive holographic plugins for FREE!"
+        - ""
+        - "&lYou can purchase the premium version of the plugin at the link below."
+        - ""
+        - "&lThe premium version of the plugin will &c&lNOT&r&l contain these messages."
+      position:
+        x: 0
+        y: 1.2
+
+    paypal-donate-btn:
+      type: "button"
+      mini: true
+      icon: "paypal-btn.png"
+      symmetrical: true
+      label: "&lDonate on &1&lPaypal"
+      label-distance: 8
+      label-zoom-distance: 2
+      always-show-label: true
+      execute-onclick-as-console: true
+      onclick: "tellraw %player_name% {\"text\":\"\",\"extra\":[{\"text\":\"Click Here: \",\"color\":\"bold\"},{\"text\":\"Donate to Kloudy on Paypal\",\"color\":\"underline\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PL8WLYA9DXRVQ\"}}]}"
+      onclick-sound: "UI_BUTTON_CLICK"
+      position:
+        x: -0.7
+        y: 0.6
+
+    premium-version:
+      type: "button"
+      symmetrical: true
+      label: "&lPurcahse %hologuiapi_premium-title% &6&lPremium&r&l on Spigot"
+      label-distance: 8
+      label-zoom-distance: 2
+      always-show-label: true
+      icon: "spigot.png"
+      execute-onclick-as-console: true
+      onclick: "tellraw %player_name% {\"text\":\"\",\"extra\":[{\"text\":\"Click Here: \",\"color\":\"bold\"},{\"text\":\"%hologuiapi_premium-title%\",\"color\":\"underline\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"%hologuiapi_premium-plugin-link%\"}}]}"
+      onclick-sound: "UI_BUTTON_CLICK"
+      position:
+        x: 0
+        y: 0.85
+
+    youtube-btn:
+      type: "button"
+      symmetrical: true
+      label: "&lKloudy's &4&lYouTube&r&l Channel"
+      label-distance: 8
+      label-zoom-distance: 2
+      always-show-label: true
+      mini: true
+      execute-onclick-as-console: true
+      onclick: "tellraw %player_name% {\"text\":\"\",\"extra\":[{\"text\":\"Click Here: \",\"color\":\"bold\"},{\"text\":\"Kloudy's Youtube Channel\",\"color\":\"underline\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://www.youtube.com/user/Kl0udy\"}}]}"
+      onclick-sound: "UI_BUTTON_CLICK"
+      icon: "youtube.png"
+      position:
+        x: 0.7
+        y: 0.6
+
+    plugins-text:
+      type: "label"
+      label-distance: 6
+      text:
+        - "&6&lCheck out some of my other"
+        - ""
+        - "&6&linteractive holographic plugins:"
+      position:
+        x: 0
+        y: 0.22
+
+    stafftimesheet-btn:
+      type: "button"
+      symmetrical: true
+      icon: "stafftimesheet.png"
+      label: "&lStaffTimesheet"
+      label-distance: 8
+      label-zoom-distance: 2
+      always-show-label: true
+      execute-onclick-as-console: true
+      onclick: "tellraw %player_name% {\"text\":\"\",\"extra\":[{\"text\":\"Click Here: \",\"color\":\"bold\"},{\"text\":\"StaffTimesheet\",\"color\":\"underline\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://www.spigotmc.org/resources/stafftimesheet.32719/\"}}]}"
+      onclick-sound: "UI_BUTTON_CLICK"
+      position:
+        x: 0
+        y: 0
+
+    stafftimesheet-label:
+      type: "label"
+      label-distance: 8
+      text:
+        - "&lA &9&lbeauiful&r&l & &c&lfunctional"
+        - ""
+        - "&lholographic staff management system"
+      position:
+        x: 0
+        y: -0.58
+
+    next-btn:
+      type: "button"
+      mini: true
+      label: "&a&lNext Plugin"
+      always-show-label: true
+      icon: "next-btn.png"
+      onclick-sound: "UI_BUTTON_CLICK"
+      position:
+        x: 0.35
+        y: -0.15
+
+    back-btn:
+      type: "button"
+      mini: true
+      hidden: true
+      label: "&6&lPrevious Plugin"
+      always-show-label: true
+      icon: "back.png"
+      onclick-sound: "UI_BUTTON_CLICK"
+      position:
+        x: -0.35
+        y: -0.15
+
+    continue-btn:
+      type: "button"
+      label: "&a&lSKIP"
+      label-distance: 8
+      label-zoom-distance: 2
+      always-show-label: true
+      icon: "confirm.png"
+      mini: true
+      symmetrical: true
+      onclick-sound: "UI_BUTTON_CLICK"
+      position:
+        x: 0.7
+        y: 0.1
+
+    never-show-again-toggle:
+      type: "toggle-switch"
+      label: "&lShow again: &l%never-show-again-toggle_value%"
+      label-distance: 8
+      label-zoom-distance: 2
+      always-show-label: true
+      value: true
+      on-value: "&a&lYes"
+      off-value: "&c&lNo"
+      onclick-sound: "UI_BUTTON_CLICK"
+      position:
+        x: -0.7
+        y: 0.1
