@@ -45,13 +45,13 @@ promo-page:
     premium-version:
       type: "button"
       symmetrical: true
-      label: "&lPurcahse %hologuiapi_premium-title% &6&lPremium&r&l on Spigot"
+      label: "&lPurcahse the &6&lPremium&r&l version on Spigot!"
       label-distance: 8
       label-zoom-distance: 2
       always-show-label: true
       icon: "spigot.png"
       execute-onclick-as-console: true
-      onclick: "tellraw %player_name% {\"text\":\"\",\"extra\":[{\"text\":\"Click Here: \",\"color\":\"bold\"},{\"text\":\"%hologuiapi_premium-title%\",\"color\":\"underline\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"%hologuiapi_premium-plugin-link%\"}}]}"
+      onclick: "tellraw %player_name% {\"text\":\"\",\"extra\":[{\"text\":\"Click Here: \",\"color\":\"bold\"},{\"text\":\"%hologuiapi_premium-title%\",\"color\":\"underline\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"$model.premiumLink();\"}}]}"
       onclick-sound: "UI_BUTTON_CLICK"
       position:
         x: 0
@@ -84,32 +84,6 @@ promo-page:
         x: 0
         y: 0.22
 
-    stafftimesheet-btn:
-      type: "button"
-      symmetrical: true
-      icon: "stafftimesheet.png"
-      label: "&lStaffTimesheet"
-      label-distance: 8
-      label-zoom-distance: 2
-      always-show-label: true
-      execute-onclick-as-console: true
-      onclick: "tellraw %player_name% {\"text\":\"\",\"extra\":[{\"text\":\"Click Here: \",\"color\":\"bold\"},{\"text\":\"StaffTimesheet\",\"color\":\"underline\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://www.spigotmc.org/resources/stafftimesheet.32719/\"}}]}"
-      onclick-sound: "UI_BUTTON_CLICK"
-      position:
-        x: 0
-        y: 0
-
-    stafftimesheet-label:
-      type: "label"
-      label-distance: 8
-      text:
-        - "&lA &9&lbeauiful&r&l & &c&lfunctional"
-        - ""
-        - "&lholographic staff management system"
-      position:
-        x: 0
-        y: -0.58
-
     next-btn:
       type: "button"
       mini: true
@@ -135,28 +109,14 @@ promo-page:
 
     continue-btn:
       type: "button"
-      label: "&a&lSKIP"
+      label: "&a&lContinue to &6&l[$model.pluginName();]"
       label-distance: 8
       label-zoom-distance: 2
       always-show-label: true
-      icon: "confirm.png"
+      icon: "next-btn.png"
       mini: true
       symmetrical: true
       onclick-sound: "UI_BUTTON_CLICK"
       position:
-        x: 0.7
-        y: 0.1
-
-    never-show-again-toggle:
-      type: "toggle-switch"
-      label: "&lShow again: &l%never-show-again-toggle_value%"
-      label-distance: 8
-      label-zoom-distance: 2
-      always-show-label: true
-      value: true
-      on-value: "&a&lYes"
-      off-value: "&c&lNo"
-      onclick-sound: "UI_BUTTON_CLICK"
-      position:
-        x: -0.7
+        x: 1.0
         y: 0.1
