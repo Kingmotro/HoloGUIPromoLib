@@ -21,6 +21,8 @@ import com.antarescraft.kloudy.hologuiapi.playerguicomponents.PlayerGUIPageModel
 
 public class PromoPageModel extends PlayerGUIPageModel
 {
+	private String spigotProfileLink;
+	
 	private PlayerGUIPage playerGUIPage;
 		
 	private ButtonComponent continueBtn;
@@ -33,9 +35,11 @@ public class PromoPageModel extends PlayerGUIPageModel
 	
 	private int page = 0;
 	
-	public PromoPageModel(final HoloGUIPlugin plugin, GUIPage guiPage, final Player player, final GUIPage redirectGUIPage, final PlayerGUIPageModel redirectModel)
+	public PromoPageModel(final HoloGUIPlugin plugin, GUIPage guiPage, final Player player, String spigotProfileLink, final GUIPage redirectGUIPage, final PlayerGUIPageModel redirectModel)
 	{
 		super(plugin, guiPage, player);
+		
+		this.spigotProfileLink = spigotProfileLink;
 		
 		// Load up the plugin images if we haven't already.
 		if(imageLines == null)
@@ -68,7 +72,7 @@ public class PromoPageModel extends PlayerGUIPageModel
 				properties.setAlwaysShowLabel(true);
 				properties.setLabel(promo.pluginName());
 				properties.setExecuteCommandAsConsole(true);
-				properties.setOnclickSound(Sound.UI_BUTTON_CLICK);
+				properties.setOnclickSound(Sound.ENTITY_EXPERIENCE_ORB_PICKUP);
 				properties.setOnclick(String.format("tellraw %s {\"text\":\"\",\"extra\":[{\"text\":\"Click Here: \",\"color\":\"bold\"},{\"text\":\"%s\",\"color\":\"underline\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"%s\"}}]}", 
 						player.getName(), promo.pluginName(), promo.link()));
 				
@@ -179,5 +183,10 @@ public class PromoPageModel extends PlayerGUIPageModel
 	public String pluginName()
 	{
 		return plugin.getName();
+	}
+	
+	public String spigotProfileLink()
+	{
+		return spigotProfileLink;
 	}
 }

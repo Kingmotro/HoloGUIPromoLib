@@ -45,13 +45,13 @@ promo-page:
     premium-version:
       type: "button"
       symmetrical: true
-      label: "&lPurcahse the &6&lPremium&r&l version on Spigot!"
+      label: "&lKloudy's &6&lSpigot&r&l Page"
       label-distance: 8
       label-zoom-distance: 2
       always-show-label: true
       icon: "spigot.png"
       execute-onclick-as-console: true
-      onclick: "tellraw %player_name% {\"text\":\"\",\"extra\":[{\"text\":\"Click Here: \",\"color\":\"bold\"},{\"text\":\"%hologuiapi_premium-title%\",\"color\":\"underline\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"$model.premiumLink();\"}}]}"
+      onclick: "tellraw %player_name% {\"text\":\"\",\"extra\":[{\"text\":\"Click Here: \",\"color\":\"bold\"},{\"text\":\"Spigot Page\",\"color\":\"underline\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"$model.spigotProfileLink();\"}}]}"
       onclick-sound: "UI_BUTTON_CLICK"
       position:
         x: 0

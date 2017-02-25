@@ -6,10 +6,10 @@ public enum PluginPromo
 			"https://www.spigotmc.org/resources/stafftimesheet.32719/", 
 			new String[] { "&lA &9&lbeauiful&r&l & &c&lintuitive", "", "&lholographic staff management system" }),
 	
-	HOLO_SLOTS("&lHoloSlots", "HoloSlots.png", 
+	HOLO_SLOTS("&lHoloSlots (Coming soon...)", "HoloSlots.png", 
 			"https://www.spigotmc.org/members/kloudy.42303/", new String[] { "&lAn &9&linnovative&r&l & &c&lfun", "", "&lholographic slot machine (Coming soon...)" }),
 	
-	STOPWATCH("&lStopwatch - &a&lExample HoloGUIApi Plugin", "Stopwatch.gif", 
+	STOPWATCH("&lStopwatch", "Stopwatch.gif", 
 			"https://www.spigotmc.org/resources/stopwatch-a-hologui-plugin.32595/", 
 			new String[] { "&lA &9&lstylish&r&l & &c&lfunctional", "", "&lholographic stopwatch" });
 	

@@ -8,19 +8,19 @@ import com.antarescraft.kloudy.hologuiapi.playerguicomponents.PlayerGUIPageModel
 
 public class HoloGUIPromo 
 {
-	public static void openPromoPage(HoloGUIPlugin plugin, Player player, PlayerGUIPageModel model)
+	public static void openPromoPage(HoloGUIPlugin plugin, Player player, String spigotProfileLink, PlayerGUIPageModel model)
 	{
-		openPromoPage(plugin, player, null, model);
+		openPromoPage(plugin, player, spigotProfileLink, null, model);
 	}
 	
-	public static void openPromoPage(HoloGUIPlugin plugin, Player player, GUIPage guiPage)
+	public static void openPromoPage(HoloGUIPlugin plugin, Player player, String spigotProfileLink, GUIPage guiPage)
 	{
-		openPromoPage(plugin, player, guiPage, null);
+		openPromoPage(plugin, player, spigotProfileLink, guiPage, null);
 	}
 	
-	private static void openPromoPage(HoloGUIPlugin plugin, Player player, GUIPage guiPage, PlayerGUIPageModel model)
+	private static void openPromoPage(HoloGUIPlugin plugin, Player player, String spigotProfileLink, GUIPage guiPage, PlayerGUIPageModel model)
 	{
-		PromoPageModel promoModel = new PromoPageModel(plugin, plugin.getGUIPage("promo-page"), player, guiPage, model);
+		PromoPageModel promoModel = new PromoPageModel(plugin, plugin.getGUIPage("promo-page"), player, spigotProfileLink, guiPage, model);
 		plugin.getHoloGUIApi().openGUIPage(plugin, player, promoModel);
 	}
 }
